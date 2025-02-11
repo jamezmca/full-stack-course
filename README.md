@@ -73,7 +73,25 @@ I’ll help you:
 ✅ Build **real-world projects** that impress employers.  
 ✅ Deploy your projects & portfolio **so you can start applying for jobs**.  
 
-## 🎓 Ready to Go Full Stack?  
+## 🎓 Links and Resources
+
+* **Learn to Code 🔥** - https://www.smoljames.com/roadmap
+* **Get hired faster ✅** - https://www.hyr.sh
+* **Get Started Coding** - https://www.smoljames.com/roadmap
+
+* **VSCode Shortcuts** - https://www.vscodeshortcuts.smoljames.com
+* **FantaCSS** - https://www.fantacss.smoljames.com
+* **GitHub Repo** - https://github.com/jamezmca/full-stack-course
+* **Vite/ReactJS Init** - https://v3.vitejs.dev/guide/
+* **NextJS Init** - https://nextjs.org/docs/app/getting-started/installation
+* **Firebase** - https://firebase.google.com/
+* **FontAwesome CDN** - https://cdnjs.com/libraries/font-awesome
+* **FontAwesome Icons** - https://www.fontawesome.com
+* **Netlify** - https://www.netlify.com
+* **AWS Amplify** - https://aws.amazon.com/amplify/
+
+
+## 🎓 Ready for a great adventure?
 
 Let’s build some epic projects, launch your **personal brand**, and **get you hired** as a full stack developer.  
 
