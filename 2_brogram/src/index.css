@@ -1,0 +1,243 @@
+body {
+    padding: 1rem 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+header,
+main,
+footer {
+    width: 100%;
+    max-width: 700px;
+    padding: 1rem;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+header h1 {
+    width: fit-content;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex: 1;
+}
+
+.rule-item {
+    display: flex;
+    gap: 1rem;
+}
+
+.rule-item p:first-of-type {
+    min-width: 60px;
+}
+
+h3,
+.training-plan-grid {
+    padding-top: 2rem;
+}
+
+.training-plan-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.plan-card {
+    position: relative;
+    cursor: pointer;
+    flex-shrink: 0;
+    width: 100%;
+}
+
+.inactive {
+    position: relative;
+    z-index: 1;
+    cursor: not-allowed;
+    opacity: 0.8;
+}
+
+.plan-card-header {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.plan-card-header p:first-of-type,
+.plan-card-header i {
+    font-weight: 600;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    color: var(--color-link);
+}
+
+.workout-container {
+    grid-column: span 3 / span 3;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.workout-grid {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 0.5rem;
+    overflow-x: auto;
+}
+
+.exercise-name {
+    grid-column: span 3 / span 3;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.exercise-name p {
+    font-weight: 400;
+}
+
+.weight-input {
+    grid-column: span 2 / span 2;
+}
+
+.workout-buttons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 0 2rem 0;
+    text-align: center;
+}
+
+input:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+button.help-icon {
+    pointer-events: none;
+    opacity: 0;
+    padding: 0 0.5rem;
+    color: var(--color-link);
+    border: unset;
+    box-shadow: unset;
+    transform: unset;
+    width: fit-content;
+}
+
+button.help-icon:hover {
+    transform: unset;
+    box-shadow: unset;
+    opacity: 0.7;
+}
+
+.exercise-name:hover button.help-icon {
+    pointer-events: all;
+    opacity: 1;
+}
+
+.exercise-info {
+    margin: auto 0;
+}
+
+.skill-name {
+    text-transform: capitalize;
+}
+
+.modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    padding: 1rem;
+}
+
+.modal-underlay {
+    position: absolute;
+    inset: 0;
+    background: var(--background-muted);
+    opacity: 0.8;
+    z-index: 99;
+    width: 100%;
+    border: none;
+    border-radius: 0;
+    box-shadow: unset;
+}
+
+.modal-underlay:hover {
+    transform: unset;
+    box-shadow: unset;
+}
+
+.modal-content {
+    position: relative;
+    z-index: 101;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 600px;
+    max-height: 400px;
+    border-radius: var(--border-radius-large);
+    border: 1px solid var(--border-primary);
+    background: var(--background-primary);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+@media (min-width: 640px) {
+    body {
+        gap: 2rem;
+        padding: 2rem 0;
+    }
+
+    .rule-item p:first-of-type {
+        min-width: 70px;
+    }
+
+    .training-plan-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 1rem;
+    }
+
+    .workout-container {
+        grid-column: span 4 / span 4;
+    }
+
+    .plan-card-header p:first-of-type,
+    .plan-card-header i {
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .training-plan-grid {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+
+    .workout-container {
+        grid-column: span 5 / span 5;
+    }
+}

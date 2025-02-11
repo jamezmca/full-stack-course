@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>James Web Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="fanta.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header>
+        <a href="/">James M</a>
+        <nav>
+            <a target="_blank" href="https://github.com/jamezmca"><i class="fa-brands fa-github"></i></a>
+            <a target="_blank" href="https://www.linkedin.com/in/jamezmcarthur/"><i
+                    class="fa-brands fa-linkedin"></i></a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <div class="intro-header">
+                <h1>Kia ora! I'm James...</h1>
+                <p>Software Developer</p>
+            </div>
+            <h5 class="intro-description">
+                A civil engineer by qualification, and a software developer by trade. Based in New Zealand, I love to
+                walk, play video games, and build out all sorts of fun and useful internet applications!
+            </h5>
+            <div class="links-container">
+                <i class="fa-solid link-arrow fa-arrow-right"></i>
+                <a href="mailto:jamesmca@live.com">
+                    Email me
+                </a>
+                <a target="_blank" href="https://github.com/jamezmca">GitHub</a>
+                <a target="_blank" href="https://www.linkedin.com/in/jamezmcarthur/">LinkedIn</a>
+            </div>
+
+            <div id="play-game">
+                <button onclick="playGame()">Play game???</button>
+            </div>
+            <div style="display: none;" class="color-div">
+                <h4>Pick a color</h4>
+                <p style="display: none;">Great... now it's ruined!</p>
+                <input type="color" id="color-picker" onchange="changeColor()" value="#0084ff" />
+                <button style="display: none;" onclick="resetColor()">Reset</button>
+            </div>
+        </section>
+
+        <section>
+            <h2>Skills</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Area</th>
+                        <th>Technologies</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>JavaScript</td>
+                        <td>ReactJS | React Native | NextJS | NodeJS & ExpressJS | SvelteKit | Qwik</td>
+                    </tr>
+                    <tr>
+                        <td>Python</td>
+                        <td>Data analysis | Django | Data visualization</td>
+                    </tr>
+                    <tr>
+                        <td>Web</td>
+                        <td>TailwindCSS | FantaCSS | Firebase | PostgreSQL | CI/CD | GIT | Docker | Kubernetes | AWS
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Design</td>
+                        <td>Canvas | Pixlr | Microsoft Paint</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Lastest Projects</h2>
+            <div class="cards-grid">
+                <div class="project-card">
+                    <div>
+                        <p>Jan 19, 2025</p>
+                        <h4>Brogram</h4>
+                        <div class="tech-list">
+                            <div class="card-button-secondary">
+                                <p>ReactJS</p>
+                            </div>
+                            <div class="card-button-secondary">
+                                <p>FantaCSS</p>
+                            </div>
+                            <div class="card-button-secondary">
+                                <p>JavaScript</p>
+                            </div>
+                        </div>
+                        <p>The Simple 30 Workouts Training Plan.
+                        </p>
+                        <div class="project-links">
+                            <a target="_blank" href="https://brogram-plan.netlify.app">Live</a>
+                            <a target="_blank" href="https://github.com/jamezmca/2_brogram">GitHub</a>
+                        </div>
+                    </div>
+                    <div class="img-div">
+                        <img class="big-img"
+                            src="https://github.com/jamezmca/1_web_portfolio/blob/main/public/brogram.png?raw=true"
+                            alt="smoljames-thumbnail" />
+                    </div>
+                </div>
+
+
+                <div class="project-card">
+                    <div>
+                        <p>Jan 24, 2025</p>
+                        <h4>Smolstore</h4>
+                        <div class="tech-list">
+                            <div class="card-button-secondary">
+                                <p>NextJS</p>
+                            </div>
+                            <div class="card-button-secondary">
+                                <p>FantaCSS</p>
+                            </div>
+                            <div class="card-button-secondary">
+                                <p>Stripe</p>
+                            </div>
+                        </div>
+                        <p>A super cool store for programmers and productivity fiends!
+                        </p>
+                        <div class="project-links">
+                            <a target="_blank" href="https://main.d2a4evir1uyly1.amplifyapp.com/">Live</a>
+                            <a target="_blank" href="https://github.com/jamezmca/3_smolstore">GitHub</a>
+                        </div>
+                    </div>
+                    <div class="img-div">
+                        <img class="big-img"
+                            src="https://github.com/jamezmca/1_web_portfolio/blob/main/public/smolstore.png?raw=true"
+                            alt="smoljames-thumbnail" />
+                    </div>
+                </div>
+
+
+                <div class="project-card">
+                    <div>
+                        <p>July 15, 2023</p>
+                        <h4>Expenny | The Subscription Tracker</h4>
+                        <div class="tech-list">
+                            <div class="card-button-secondary">
+                                <p>NextJS</p>
+                            </div>
+                            <div class="card-button-secondary">
+                                <p>FantaCSS</p>
+                            </div>
+                            <div class="card-button-secondary">
+                                <p>Firebase</p>
+                            </div>
+                        </div>
+                        <p>Track all your subscription analytics!
+                        </p>
+                        <div class="project-links">
+                            <a target="_blank" href="https://sub-tracker.netlify.app/">Live</a>
+                            <a target="_blank" href="https://github.com/jamezmca/4_expenny">GitHub</a>
+                        </div>
+                    </div>
+                    <div class="img-div">
+                        <img class="big-img"
+                            src="https://github.com/jamezmca/1_web_portfolio/blob/main/public/expenny.png?raw=true"
+                            alt="smoljames-thumbnail" />
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>By <a href="https://www.smoljames.com" target="_blank">Smoljames</a> ⭐️ the repo on <a target="_blank"
+                href="">GitHub</a></p>
+    </footer>
+    <script>
+        // This is where we create the interactivity for our little color switching game
+
+        // 1. select all the html elements so that we can later manipulate them
+        const body = document.querySelector('body')
+        const colorInput = document.getElementById('color-picker')
+        const colorDiv = document.querySelector('.color-div')
+        const hiddenText = document.querySelector('.color-div p')
+        const resetBtn = document.querySelector('.color-div button')
+        const playBtn = document.getElementById('play-game')
+
+        // 2. create the functions 
+
+        function playGame() {
+            // this function enables the play of the game by showing the color selector input
+            colorDiv.style.display = 'block'
+            playBtn.style.display = 'none'
+        }
+
+        function changeColor() {
+            // take the users selected color on the input, and assign it to be the background color of the website
+            const selectedColor = colorInput.value
+            body.style.background = selectedColor
+            resetBtn.style.display = 'block'
+            hiddenText.style.display = 'block'
+            colorInput.style.display = 'none'
+        }
+
+        function resetColor() {
+            body.style.background = 'white'
+            colorInput.style.display = 'block'
+            playBtn.style.display = 'block'
+
+            hiddenText.style.display = 'none'
+            resetBtn.style.display = 'none'
+            colorDiv.style.display = 'none'
+        }
+
+        // 3. is to assign the functions to the buttons by adding them function call to the actual elements (done above in the html code)
+    </script>
+</body>
+
+</html>

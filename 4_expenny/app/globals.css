@@ -1,0 +1,408 @@
+/* body header */
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+header,
+main,
+footer {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+header div:first-of-type a {
+  text-decoration: none;
+}
+
+.goto {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.goto a:first-of-type {
+  display: none;
+}
+
+.full-line {
+  height: 1px;
+  background: var(--background-muted);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  flex: 1;
+}
+
+/* home page */
+.hero-section {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 3rem;
+  padding: 2rem;
+}
+
+.hero-section>div:first-of-type {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.header-text {
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+}
+
+.hero-section svg {
+  height: 2rem;
+  padding-left: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-section>div:first-of-type p {
+  max-width: 300px;
+}
+
+.hero-display {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.hero-display>div {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.hero-display>div:first-of-type {
+  padding-top: 2.5rem;
+}
+
+.hero-display .card {
+  aspect-ratio: 16 / 9;
+  border-radius: var(--border-radius-small);
+  display: flex;
+  gap: 1rem;
+}
+
+.hero-display .card>div:first-of-type {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.card-header,
+.card-description-large,
+.card-description-small {
+  border-radius: var(--border-radius-small);
+  background: var(--color-link);
+  opacity: 0.4;
+}
+
+.card-header {
+  padding: 1rem 0;
+}
+
+.card-description-large {
+  width: 80%;
+  padding: 0.35rem 0;
+}
+
+.card-description-small {
+  width: 64%;
+  padding: 0.35rem 0;
+}
+
+.card-blank {
+  flex: 1;
+}
+
+.card-square {
+  background: var(--color-link-transparent);
+  border-radius: var(--border-radius-small);
+  padding: 2rem 0;
+  width: 30%;
+}
+
+/* dashboard page */
+section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+section>h2 {
+  padding-bottom: 1rem;
+}
+
+.analytics-card {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.25rem;
+  border-radius: var(--border-radius-large);
+  overflow: hidden;
+}
+
+.analytics-item {
+  background: var(--background-muted);
+  padding: 1rem;
+}
+
+.analytics-item p {
+  text-transform: capitalize;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.subscription-card {
+  display: flex;
+  flex-direction: column;
+  background: white !important;
+  position: relative;
+  overflow: hidden;
+  transition-duration: 200ms;
+}
+
+.subscription-card>div:first-of-type {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.status {
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--border-radius-small);
+}
+
+.sub-cost {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.5rem;
+}
+
+.sub-cost p {
+  margin-bottom: -2px;
+}
+
+.sub-renewal {
+  padding-top: 0.5rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.sub-renewal h4 {
+  margin-top: -0.5rem;
+}
+
+.white-line {
+  background: var(--background-muted);
+  height: 3px;
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.subscription-actions {
+  pointer-events: none;
+  transition-duration: 200ms;
+  opacity: 0;
+  z-index: 10;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background: white;
+}
+
+.subscription-actions button {
+  width: 100%;
+}
+
+.subscription-actions button i {
+  padding-right: 0.5rem;
+}
+
+.subscription-card:hover .subscription-actions {
+  pointer-events: all;
+  opacity: 1;
+}
+
+.add-subscriptions {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 4rem 1rem !important;
+}
+
+section form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+section form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  width: 100%;
+  max-width: unset;
+}
+
+form textarea {
+  resize: none;
+}
+
+.form-submit-btns {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.fat-column {
+  grid-column: span 2/ span 2;
+}
+
+/* login  */
+
+.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+  flex: 1;
+  padding: 4rem 0;
+}
+
+.login>div:last-of-type {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+
+/* footer */
+footer {
+  margin-top: 2rem;
+}
+
+.hard-line {
+  height: 1px;
+  background: var(--border-secondary);
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 4rem 1rem;
+}
+
+.footer-content>div:first-of-type {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footer-content>div:first-of-type div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.footer-content>div:last-of-type div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* media queries */
+
+@media (min-width: 640px) {
+  .goto a:first-of-type {
+    display: block;
+  }
+
+  main {
+    gap: 3rem;
+  }
+
+  .hero-section {
+    padding: 3rem;
+  }
+
+  .header-text {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+
+  .hero-section>div:first-of-type p {
+    max-width: 400px;
+  }
+
+  .analytics-card {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .card-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+
+  section form {
+    gap: 1rem 2rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero-section {
+    padding: 6rem 0;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 3rem;
+  }
+
+
+  .footer-content {
+    flex-direction: row;
+  }
+
+  .footer-content>div:last-of-type {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-end;
+  }
+}
