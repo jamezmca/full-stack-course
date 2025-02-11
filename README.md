@@ -85,6 +85,7 @@ I’ll help you:
 * **Vite/ReactJS Init** - https://v3.vitejs.dev/guide/
 * **NextJS Init** - https://nextjs.org/docs/app/getting-started/installation
 * **Firebase** - https://firebase.google.com/
+* **Stripe** - Stripe - https://dashboard.stripe.com/dashboard
 * **FontAwesome CDN** - https://cdnjs.com/libraries/font-awesome
 * **FontAwesome Icons** - https://www.fontawesome.com
 * **Netlify** - https://www.netlify.com
